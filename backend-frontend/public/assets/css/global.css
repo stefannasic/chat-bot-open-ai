@@ -32,3 +32,8 @@ h2 {
     font-size: 24px;
     color: #040403;
 }
+
+.right-container {
+    width: 80%;
+    margin-left: auto;
+}

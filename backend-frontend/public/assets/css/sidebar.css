@@ -1,0 +1,49 @@
+.sidebar {
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+    font-size: 18px;
+    font-weight: bold;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.logo {
+    padding: 32px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    padding: 4px 16px;
+}
+
+.sidebar-link:hover {
+    background-color: #415A77;
+}
+
+.sidebar-link:hover {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link img {
+    margin-right: 16px;
+}
+
+.sidebar-link:link,
+.sidebar-link:visited,
+.sidebar-link:focus,
+.sidebar-link:active {
+    text-decoration: none;
+    color: #E0E1DD;
+}

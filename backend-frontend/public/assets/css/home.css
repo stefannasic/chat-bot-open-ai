@@ -12,6 +12,8 @@
     padding: 4px 8px;
     transition: 0.3s;
     border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .navbar a:hover {
@@ -52,6 +54,8 @@
     padding: 4px 8px;
     transition: 0.3s;
     border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .main a:hover {
