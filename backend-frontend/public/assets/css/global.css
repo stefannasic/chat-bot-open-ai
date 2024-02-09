@@ -13,6 +13,11 @@ body {
     font-weight: bold;
 }
 
+.message {
+    color: darkgreen;
+    font-weight: bold;
+}
+
 .errors ul {
     padding: 0;
     margin-bottom: 16px;
