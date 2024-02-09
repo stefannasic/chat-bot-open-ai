@@ -35,5 +35,8 @@ h2 {
 
 .right-container {
     width: 85%;
+    height: 100vh;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
 }
