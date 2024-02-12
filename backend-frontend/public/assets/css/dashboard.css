@@ -38,6 +38,42 @@
     border-radius: 8px;
 }
 
+.request img {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.request .content {
+    background-color: #415A77;
+    border-radius: 8px;
+    padding: 4px 16px;
+    display: inline-block;
+    max-width: 100%;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.response {
+    margin: 16px 0;
+    text-align: right;
+}
+
+.response img {
+    display: block;
+    margin-bottom: 16px;
+    margin-left: auto;
+}
+
+.response .content {
+    background-color: #1B263B;
+    border-radius: 8px;
+    padding: 4px 16px;
+    display: inline-block;
+    max-width: 100%;
+    text-align: justify;
+    line-height: 1.4;
+}
+
 .send {
     align-self: flex-end;
     margin-top: auto;
