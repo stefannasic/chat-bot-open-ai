@@ -80,12 +80,12 @@
     width: 100%;
 }
 
-form {
+.send form {
     max-width: 100%;
     position: relative;
 }
 
-form input {
+.send form input {
     border: 1px solid #E0E1DD;
     border-radius: 8px;
     background-color: #415A77;
@@ -95,7 +95,7 @@ form input {
     padding: 8px;
 }
 
-form button {
+.send form button {
     background-color: transparent;
     border: none;
     cursor: pointer;

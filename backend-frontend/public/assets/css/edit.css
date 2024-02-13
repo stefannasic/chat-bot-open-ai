@@ -36,7 +36,7 @@
     padding: 18px;
 }
 
-input {
+.edit-wrapper input {
     background-color: rgba(119, 141, 169, 0.50);
     border: 0.5px solid #1B263B;
     border-radius: 8px;
@@ -45,7 +45,7 @@ input {
     margin-bottom: 8px;
 }
 
-button {
+.edit-wrapper button {
     width: 100%;
     cursor: pointer;
     background-color: #1B263B;
@@ -63,7 +63,7 @@ button {
     width: 320px;
 }
 
-button:hover {
+.edit-wrapper button:hover {
     background-color: #E0E1DD;
     color: #1B263B;
 }
