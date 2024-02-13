@@ -71,6 +71,8 @@
     padding: 4px;
     width: 100%;
     color: #E0E1DD;
+    cursor: pointer;
+    margin-bottom: 8px;
 }
 
 .preferences form button {

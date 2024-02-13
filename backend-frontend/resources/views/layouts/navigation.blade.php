@@ -10,7 +10,7 @@
             <img src="assets/images/home.svg" alt="">
             <p> Home </p> 
         </a>
-        
+
         <a class="sidebar-link" href="dashboard">
             <img src="assets/images/dashboard.svg" alt="">
             <p> Dashboard </p> 
@@ -21,10 +21,10 @@
         <div id="preferencesForm" class="hidden preferences">
             <form>
                 @csrf
-                <label for="maxTokens">Max Tokens:</label>
-                <input type="number" id="maxTokens" name="maxTokens" min="1" value="2048"><br><br>
-                <label for="temperature">Temperature:</label>
-                <input type="number" id="temperature" name="temperature" min="0" max="1" step="0.1" value="1"><br><br>
+                <label for="maxTokens">Max Tokens: <span id="maxTokensValue">2048</span></label>
+                <input type="range" id="maxTokens" name="maxTokens" min="50" max="2048" step="1" value="2048">
+                <label for="temperature">Temperature: <span id="temperatureValue">1</span></label>
+                <input type="range" id="temperature" name="temperature" min="0.1" max="1" step="0.1" value="1">
                 <button type="submit">Save</button>
             </form>
         </div>
@@ -47,9 +47,5 @@
         </form>
     </div>
 </div>
-<script>
-    document.getElementById("preferencesLink").addEventListener("click", function(event) {
-        event.preventDefault();
-        document.getElementById("preferencesForm").classList.toggle("hidden");
-    });
-</script>
+
+<script src="assets/js/preferences.js"></script>
