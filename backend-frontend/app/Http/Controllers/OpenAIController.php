@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Preference;
 use Illuminate\Http\Request;
 
 class OpenAIController extends Controller
@@ -9,11 +10,16 @@ class OpenAIController extends Controller
     public function sendMessage(Request $request) {
         $userMessage = $request->input('message');
         $apiKey = env('OPEN_AI_API_KEY');
-    
+        
+        $user = auth()->user();
+        $preferences = $user->preferences ?? new Preference();
+        $maxTokens = $preferences->max_tokens ?? 2048;
+        $temperature = $preferences->temperature ?? 1.0;
+
         $parameters = [
             'model' => 'gpt-3.5-turbo',
-            'max_tokens' => 2048,
-            'temperature' => 1.0,
+            'max_tokens' => $maxTokens,
+            'temperature' => $temperature,
             'messages' => [['role' => 'system', 'content' => $userMessage]],
         ];
     

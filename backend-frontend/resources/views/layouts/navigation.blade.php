@@ -19,12 +19,12 @@
 
     <div class="bottom">
         <div id="preferencesForm" class="hidden preferences">
-            <form>
+            <form method="POST" action="{{ route('save.preferences') }}">
                 @csrf
-                <label for="maxTokens">Max Tokens: <span id="maxTokensValue">2048</span></label>
-                <input type="range" id="maxTokens" name="maxTokens" min="50" max="2048" step="1" value="2048">
-                <label for="temperature">Temperature: <span id="temperatureValue">1</span></label>
-                <input type="range" id="temperature" name="temperature" min="0.1" max="1" step="0.1" value="1">
+                <label for="maxTokens">Max Tokens: <span id="maxTokensValue">{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : 2048 }}</span></label>
+                <input type="range" id="maxTokens" name="maxTokens" min="50" max="2048" step="1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : 2048 }}">
+                <label for="temperature">Temperature: <span id="temperatureValue">{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : 1 }}</span></label>
+                <input type="range" id="temperature" name="temperature" min="0.1" max="1" step="0.1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : 1 }}">
                 <button type="submit">Save</button>
             </form>
         </div>

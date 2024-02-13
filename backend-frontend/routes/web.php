@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PreferencesController;
 use App\Http\Controllers\OpenAIController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::post('/send-message', [OpenAIController::class, 'sendMessage']);
+
+Route::post('/save-preferences', [PreferencesController::class, 'savePreferences'])->name('save.preferences');
 
 require __DIR__.'/auth.php';
