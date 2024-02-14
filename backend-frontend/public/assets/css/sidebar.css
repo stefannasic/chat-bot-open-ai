@@ -49,12 +49,14 @@
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .preferences {
     padding: 0 32px;
     max-width: 100%;
+    transition: 0.3s;
 }
 
 .preferences form label {

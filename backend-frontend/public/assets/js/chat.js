@@ -12,6 +12,12 @@ $(document).ready(function(){
         
         var message = $('#message').val();
 
+        $('.messages').append('<div class="request"><img src="/assets/images/user.svg" alt=""><div class="content"><p>' + message + '</p></div></div>');
+        scrollToBottom();
+
+        $('.messages').append('<div class="response typing"><img src="/assets/images/robot.svg" alt=""><div class="content"><p class="typing-dots">...</p></div></div>');
+        scrollToBottom();
+
         $.ajax({
             url: '/send-message',
             method: 'POST',
@@ -22,9 +28,13 @@ $(document).ready(function(){
                 message: message
             },
             success: function(response){
-                $('.messages').append('<div class="request"><img src="/assets/images/user.svg" alt=""><div class="content"><p>' + message + '</p></div></div>');
-                $('.messages').append('<div class="response"><img src="/assets/images/robot.svg" alt=""><div class="content"><p>' + response.response + '</p></div></div>');
-                scrollToBottom();
+                $('.messages .typing').remove();
+
+                setTimeout(function() {
+                    $('.messages').append('<div class="response"><img src="/assets/images/robot.svg" alt=""><div class="content"><p>' + response.response + '</p></div></div>');
+                    scrollToBottom();
+                }, 500);
+
                 $('#message').val('');
             },
             error: function(xhr, status, error) {

@@ -31,7 +31,6 @@
                 <div class="errors">
                     <x-input-error :messages="$errors->userDeletion->get('password')" />
                 </div>
-                
             </div>
 
             <div>

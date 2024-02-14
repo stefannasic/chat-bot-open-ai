@@ -28,10 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/send-message', [OpenAIController::class, 'sendMessage']);
+    Route::post('/save-preferences', [PreferencesController::class, 'savePreferences'])->name('save.preferences');
 });
 
-Route::post('/send-message', [OpenAIController::class, 'sendMessage']);
-
-Route::post('/save-preferences', [PreferencesController::class, 'savePreferences'])->name('save.preferences');
 
 require __DIR__.'/auth.php';
