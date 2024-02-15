@@ -1,6 +1,5 @@
 .sidebar {
     background-color: #0D1B2A;
-    color: #E0E1DD;
     font-size: 18px;
     font-weight: bold;
     width: 15%;
@@ -25,6 +24,7 @@
     align-items: center;
     transition: 0.3s;
     padding: 4px 16px;
+    color: #E0E1DD;
 }
 
 .sidebar-link:hover {
@@ -45,7 +45,6 @@
 .sidebar-link:focus,
 .sidebar-link:active {
     text-decoration: none;
-    color: #E0E1DD;
 }
 
 .hidden {
@@ -60,7 +59,6 @@
 }
 
 .preferences form label {
-    color: #E0E1DD;
     font-size: 16px;
     display: block;
     margin-bottom: 8px;
@@ -83,8 +81,8 @@
     cursor: pointer;
     background-color: #1B263B;
     border: 0.5px solid #1B263B;
-    border-radius: 8px;
     color: #E0E1DD;
+    border-radius: 8px;
     font-size: 18px;
     font-weight: bold;
     transition: 0.3s;

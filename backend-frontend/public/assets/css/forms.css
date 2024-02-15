@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
+    color: #040403;
+};
 
 .form-wrapper {
     background-color: #E0E1DD;

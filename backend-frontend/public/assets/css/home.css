@@ -7,8 +7,8 @@
     text-decoration: none;
     font-size: 18px;
     margin-left: 16px;
+    border: 1px solid #E0E1DD;
     color: #E0E1DD;
-    border: 1px solid white;
     padding: 4px 8px;
     transition: 0.3s;
     border-radius: 8px;
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Dodajte ovu liniju */
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -34,12 +34,10 @@
 }
 
 .main h1 {
-    color: #E0E1DD;
     font-size: 48px;
 }
 
 .main p {
-    color: #E0E1DD;
     font-size: 20px;
     font-style: italic;
     margin-bottom: 64px;

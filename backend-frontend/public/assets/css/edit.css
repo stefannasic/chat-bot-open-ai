@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow-y: auto;
+    color: #040403;
 }
 
 .edit::-webkit-scrollbar {
