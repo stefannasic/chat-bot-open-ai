@@ -6,6 +6,10 @@
     color: #040403;
 };
 
+.help {
+    background-color: transparent;
+}
+
 .form-wrapper {
     background-color: #E0E1DD;
     border: 1px solid #1B263B;

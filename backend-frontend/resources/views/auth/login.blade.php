@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/css/forms.css">
 
 <div class="form-container">
-    <div class="form-wrapper">
+    <div class="form-wrapper help">
         <h2>Log In</h2>
         <form method="POST" action="{{ route('login') }}">
             @csrf
