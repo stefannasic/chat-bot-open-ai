@@ -32,14 +32,6 @@
             <div class="form-content-wrapper">
                 <button type="submit">{{ __('Log in') }}</button>
             </div>
-
-            <div class="form-content-wrapper">
-                @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-                @endif
-            </div>
             
             <div class="form-content-wrapper">
                 <a href="{{ route('register') }}">

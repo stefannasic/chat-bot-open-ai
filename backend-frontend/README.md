@@ -6,9 +6,11 @@ Follow these steps to successfully set up the Laravel project.
 
 composer install
 
-2. Copy the .env.example file and rename it to .env. Then, open the .env file and set the value of your OpenAI API key in the OPEN_AI_API_KEY field:
+2. Copy the .env.example file and rename it to .env. Then, open the .env file and set the following values:
 
 OPEN_AI_API_KEY='your_open_api_key'
+OPEN_AI_API_ENDPOINT='https://api.openai.com/v1/chat/completions'
+OPEN_AI_MODEL='gpt-3.5-turbo'
 
 3. Run the database migration to create the necessary tables:
 
