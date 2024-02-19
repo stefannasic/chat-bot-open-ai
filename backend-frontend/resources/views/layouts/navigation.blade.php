@@ -21,10 +21,10 @@
         <div id="preferencesForm" class="hidden preferences">
             <form method="POST" action="{{ route('save.preferences') }}">
                 @csrf
-                <label for="maxTokens">Max Tokens: <span id="maxTokensValue">{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : 2048 }}</span></label>
-                <input type="range" id="maxTokens" name="maxTokens" min="50" max="2048" step="1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : 2048 }}">
-                <label for="temperature">Temperature: <span id="temperatureValue">{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : 1 }}</span></label>
-                <input type="range" id="temperature" name="temperature" min="0.1" max="1" step="0.1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : 1 }}">
+                <label for="maxTokens">Max Tokens: <span id="maxTokensValue">{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : env('MAX_TOKENS_VALUE') }}</span></label>
+                <input type="range" id="maxTokens" name="maxTokens" min="50" max="2048" step="1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->max_tokens : env('MAX_TOKENS_VALUE') }}">
+                <label for="temperature">Temperature: <span id="temperatureValue">{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : env('MAX_TEMPERATURE_VALUE') }}</span></label>
+                <input type="range" id="temperature" name="temperature" min="0.1" max="1" step="0.1" value="{{ Auth::user()->preferences ? Auth::user()->preferences->temperature : env('MAX_TEMPERATURE_VALUE') }}">
                 <button type="submit">Save</button>
             </form>
         </div>

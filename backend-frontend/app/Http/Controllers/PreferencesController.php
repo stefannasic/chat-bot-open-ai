@@ -19,7 +19,7 @@ class PreferencesController extends Controller
         $user = auth()->user();
         $preferences = $user->preferences ?? new Preference();
     
-        if(($maxTokens >= 50 && $maxTokens <= 2048) && ($temperature >= 0.1 && $temperature <= 1)) {
+        if(($maxTokens >= env('MIN_TOKENS_VALUE') && $maxTokens <= env('MAX_TOKENS_VALUE')) && ($temperature >= env('MIN_TEMPERATURE_VALUE') && $temperature <= env('MAX_TEMPERATURE_VALUE'))) {
             $preferences->max_tokens = $maxTokens;
             $preferences->temperature = $temperature;
             $user->preferences()->save($preferences);
